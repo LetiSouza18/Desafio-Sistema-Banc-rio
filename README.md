@@ -1,7 +1,6 @@
-# Desafio: Criando um Sistema Bancário
-# Curso Formação Python na Dio
-from concurrent.futures.process import _SafeQueue
 
+# Curso Formação Python na Dio
+# Desafio: Criando um Sistema Bancário
 
 menu = """
 
@@ -45,6 +44,31 @@ while True:
 
         if excedeu_saldo:
             print("Operação falhou! Saldo insuficiente.")
+
+        elif excedeu_limite:
+            print("Operação falhou! O valor do saque excede o limite.")
+
+        elif excedeu_saques:
+            print("Operação falhou! Número máximo de saques excedido.")
+
+        elif valor > 0:
+            saldo -= valor
+            extrato += f"Saque: R$ {valor:.2}\n"
+            numero_saques += 1
+        
+
+        else: print("Operação falhou! O valor informado é inválido")
+    
+    elif opcao == "e":
+        print("\n EXTRATO")
+        print("Não foram realizadas movimentações." if not extrato else extrato)
+        print(f"\nSaldo: R$ {saldo:.2}")
+
+    elif opcao == "q":
+        break
+    else:
+        print("Operação inválida. Selecione novamente a opção desejada.")
+
 
         elif excedeu_limite:
             print("Operação falhou! O valor do saque excede o limite.")
