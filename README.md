@@ -70,9 +70,4 @@ while True:
         print("Operação inválida. Selecione novamente a opção desejada.")
 
 
-        elif excedeu_limite:
-            print("Operação falhou! O valor do saque excede o limite.")
-
-        elif excedeu_saques:
-            print("Operação falhou! Número máximo de saques excedido.")
             
