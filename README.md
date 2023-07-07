@@ -53,7 +53,7 @@ while True:
 
         elif valor > 0:
             saldo -= valor
-            extrato += f"Saque: R$ {valor:.2}\n"
+            extrato += f"Saque: R$ {valor:.2f}\n"
             numero_saques += 1
         
 
@@ -62,7 +62,7 @@ while True:
     elif opcao == "e":
         print("\n EXTRATO")
         print("Não foram realizadas movimentações." if not extrato else extrato)
-        print(f"\nSaldo: R$ {saldo:.2}")
+        print(f"\nSaldo: R$ {saldo:.2f}")
 
     elif opcao == "q":
         break
